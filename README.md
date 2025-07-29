@@ -12,6 +12,43 @@ Ce projet implémente un Generative Adversarial Network (GAN) pour générer des
 └── explore.ipynb                 # Notebook d'exploration et démonstration
 ```
 
+## Data Generation using genAI
+
+![GAN Discriminator](./image/GAN%20discriminator.png)
+
+GANs are a type of neural network used to generate new and realistic data such as images, text, or audio. They were introduced by Ian Goodfellow in 2014.
+
+A GAN consists of two main parts:
+
+1. Generator
+
+    This is a neural network whose goal is to create artificial data (e.g., an image).
+
+    It takes a random vector (called noise) as input and produces synthetic data.
+
+    The generator aims to fool the discriminator by producing samples realistic enough to be mistaken for real data.
+
+2. Discriminator
+
+    This is another neural network that acts as a binary classifier.
+
+    It receives either real data (from the true dataset) or generated data from the generator.
+
+    Its task is to distinguish real data from fake (generated) data.
+
+    It outputs a probability indicating whether the input is real or generated.
+
+### How the GAN Works
+
+The two networks are trained simultaneously in a zero-sum game (a kind of competition):
+
+- The generator improves to produce increasingly realistic data to fool the discriminator.
+- The discriminator improves to better detect fake data.
+
+This adversarial training pushes both networks to improve until the generator creates data almost indistinguishable from real data.
+
+
+
 ## Fonctionnalités
 
 - Génération de données synthétiques via GAN
