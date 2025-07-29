@@ -74,3 +74,16 @@ def build_discriminator():
 # create the discriminator
 discriminator = build_discriminator()
 discriminator.summary()
+
+
+def build_gan(generator, discriminator):
+    # freeze the discriminator’s weights while training the generator
+    discriminator.trainable = False
+
+    model = Sequential([generator, discriminator])
+    model.compile(loss='binary_crossentropy', optimizer=Adam())
+    return model
+
+# create the GAN
+gan = build_gan(generator, discriminator)
+gan.summary()
