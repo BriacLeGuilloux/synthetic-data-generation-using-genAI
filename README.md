@@ -1,15 +1,15 @@
-# Génération de Données Synthétiques avec GAN
+# Synthetic Data Generation with GAN
 
-Ce projet implémente un Generative Adversarial Network (GAN) pour générer des données synthétiques d'utilisation d'applications. Il est basé sur le tutoriel [Synthetic Data Generation with Generative AI](https://amanxai.com/2024/10/14/synthetic-data-generation-with-generative-ai/).
+This project implements a Generative Adversarial Network (GAN) to generate synthetic application usage data.
 
-## Structure du Projet
+## Project Structure
 
 ```
 .
 ├── data/
-│   └── screentime_analysis.csv    # Données d'origine
-├── data_gen_utils.py             # Fonctions utilitaires pour le GAN
-└── explore.ipynb                 # Notebook d'exploration et démonstration
+│ └── screentime_analysis.csv # Original dataset
+├── data_gen_utils.py # Utility functions for the GAN
+└── explore.ipynb # Exploration and demonstration notebook
 ```
 
 ## Data Generation using genAI
@@ -44,39 +44,37 @@ This adversarial training pushes both networks to improve until the generator cr
 
 
 
-## Fonctionnalités
+## Features
 
-- Génération de données synthétiques via GAN
-- Prétraitement automatique des données
-- Visualisation des distributions
-- Évaluation de la qualité des données générées
+- Synthetic data generation via GAN  
+- Automatic data preprocessing  
+- Distribution visualization  
+- Quality evaluation of generated data
 
+## Usage
 
-## Utilisation
+### Using the Notebook
 
-### Via le Notebook
+1. Open `explore.ipynb` in Jupyter  
+2. Follow the notebook cells to:  
+   - Load and preprocess the data  
+   - Configure and train the GAN  
+   - Generate synthetic data
 
-1. Ouvrir `explore.ipynb` dans Jupyter
-2. Suivre les cellules du notebook pour :
-   - Charger et prétraiter les données
-   - Configurer et entraîner le GAN
-   - Générer des données synthétiques
-
-
-## Architecture du GAN
+## GAN Architecture
 
 ### Generator
-- Input : Vecteur de bruit aléatoire (dimension 100)
-- Couches denses avec LeakyReLU et BatchNormalization
-- Output : Données synthétiques (3 features)
+- Input: Random noise vector (dimension 100)  
+- Dense layers with LeakyReLU and BatchNormalization  
+- Output: Synthetic data (3 features)
 
 ### Discriminator
-- Input : Données réelles ou synthétiques
-- Couches denses avec LeakyReLU
-- Output : Classification binaire (réel/synthétique)
+- Input: Real or synthetic data  
+- Dense layers with LeakyReLU  
+- Output: Binary classification (real/fake)
 
-## Paramètres Configurables
+## Configurable Parameters
 
-- `latent_dim` : Dimension du vecteur de bruit (default: 100)
-- `nb_epochs` : Nombre d'époques d'entraînement (default: 10000)
-- `batch_size` : Taille des batchs (default: 128)
+- `latent_dim`: Dimension of the noise vector (default: 100)  
+- `nb_epochs`: Number of training epochs (default: 10000)  
+- `batch_size`: Batch size (default: 128)  
