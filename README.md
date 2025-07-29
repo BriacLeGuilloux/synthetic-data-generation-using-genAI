@@ -22,20 +22,15 @@ A GAN consists of two main parts:
 
 1. Generator
 
-    This is a neural network whose goal is to create artificial data (e.g., an image).
-
+    This is a neural network whose goal is to create artificial data.
     It takes a random vector (called noise) as input and produces synthetic data.
-
     The generator aims to fool the discriminator by producing samples realistic enough to be mistaken for real data.
 
 2. Discriminator
 
     This is another neural network that acts as a binary classifier.
-
     It receives either real data (from the true dataset) or generated data from the generator.
-
     Its task is to distinguish real data from fake (generated) data.
-
     It outputs a probability indicating whether the input is real or generated.
 
 ### How the GAN Works
