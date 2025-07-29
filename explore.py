@@ -5,7 +5,7 @@ from tensorflow.keras.layers import Dense, LeakyReLU, BatchNormalization
 from tensorflow.keras.optimizers import Adam
 from sklearn.preprocessing import MinMaxScaler
 
-data = pd.read_csv('/content/Screentime-App-Details.csv')
+data = pd.read_csv('./data/Screentime-App-Details.csv')
 
 print(data.head())
 
