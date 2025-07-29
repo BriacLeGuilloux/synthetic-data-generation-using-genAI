@@ -14,7 +14,7 @@ Ce projet implémente un Generative Adversarial Network (GAN) pour générer des
 
 ## Data Generation using genAI
 
-![GAN Discriminator](./image/GAN%20discriminator.png)
+![GAN Overview](./image/GAN_overview.png)
 
 GANs are a type of neural network used to generate new and realistic data such as images, text, or audio. They were introduced by Ian Goodfellow in 2014.
 
